@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Status by ID</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="/css/flightStatusCss.css">
+</head>
+
+<body>
+    <section>
+        <%- include ('partials/navbar') %>
+    </section>
+    <section class="flightStatusEJS">
+        <section class="flightStatus">
+            <div class="flightStatusByIDNavigation">
+                <a href="/" class="backBtn">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </a>
+                <h1>Flight Status</h1>
+            </div>
+            <% if (flight) { %>
+                <div class="flightCard">
+                    <div class="flightImage">
+                        <img src="images/<%= flight.airlineLogo %>" alt="Airline Logo" />
+                    </div>
+                    <div class="flightInfoContainer">
+                        <div>
+                            <p><strong>Flight ID:</strong> <%= flight.flightID %></p>
+                            <p><strong>Plane No:</strong> <%= flight.planeNo %></p>
+                            <p><strong>Airline:</strong> <%= flight.airline %></p>
+                        </div>
+                        <div>
+                            <p><strong>Departure:</strong> <%= new Date(flight.departure).toLocaleString() %></p>
+                            <p><strong>Arrival:</strong> <%= new Date(flight.arrival).toLocaleString() %></p>
+                            <p><strong>Destination:</strong> <%= flight.destination %></p>
+                        </div>
+                    </div>
+                </div>
+            <% } else { %>
+                <p>No flight information available.</p>
+            <% } %>
+        </section>
+        <section class="tipsContainer">
+            <div class="tips">
+                <h2>Baggage Tips</h2>
+                <ul>
+                    <li>Economy Class: 15kg check-in baggage, 10kg cabin baggage.</li>
+                    <li>Business Class: 20kg check-in baggage, 15kg cabin baggage.</li>
+                    <li>First Class: 30kg check-in baggage, 20kg cabin baggage.</li>
+                </ul>
+            </div>
+            <div class="tips">
+                <h2>Travel Tips and Guidelines</h2>
+                <ul>
+                    <li>Check the latest travel advisories and guidelines for your destination.</li>
+                    <li>Ensure you have all necessary travel documents, including passports and visas.</li>
+                    <li>Follow COVID-19 protocols such as wearing masks, sanitizing hands, and maintaining social distance.</li>
+                    <li>Arrive at the airport early to allow time for health and safety checks.</li>
+                    <li>Pack essentials like hand sanitizer, masks, and gloves in your carry-on bag.</li>
+                    <li>Keep updated with your airline's policies on cancellations and rescheduling.</li>
+                    <li>Stay informed about quarantine requirements at your destination.</li>
+                </ul>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>

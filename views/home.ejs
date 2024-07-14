@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirPlus</title>
+    <!------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Bootstrap -->
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Javascript -->
+    <script src="/javascript/javascript.js"></script>
+    <!------------------------------------------------------------------------------------------------------------------------------->
+
+</head>
+
+<body>
+    <!------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Section 1 : Header -->
+    <section class="header">
+        <!-- Navigation Bar -->
+        <section class="navbar">
+            <%- include(user ? 'partials/loggedNav' : 'partials/navbar') %>
+        </section>
+
+        <!-- Headliner -->
+        <section class="headlinerContainer">
+            <h1>Book Your Next Flight With AirPlus</h1>
+            <p>Get the best deals on flights to your favorite destinations</p>
+            <a href="/book" class="checkBtn">Book Now</a>
+        </section>
+
+        <!-- Booking System -->
+        <section class="flightStatusContainer">
+            <div class="flightStatusNavigation">
+                <span>Flight Status</span>
+            </div>
+            <form action="/flightStatus" class="flightForm" method="GET">
+                <!--------------------------------------------------------------------->
+                <!-- Location Depature -->
+                <div class="flightGroup">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                    <div class="flightFormInput">
+                        <div class="inputGroup">
+                            <input type="text" name="location" />
+                            <label>Location</label>
+                        </div>
+                        <p>Where are you going?</p>
+                    </div>
+                </div>
+                <!--------------------------------------------------------------------->
+                <!-- Date Depature -->
+                <div class="flightGroup">
+                    <span class="material-symbols-outlined">
+                        calendar_month
+                    </span>
+                    <div class="flightFormInput">
+                        <div class="inputGroup">
+                            <input type="date" name="departureDate" />
+                            <label>Depature Date</label>
+                        </div>
+                        <p>Add Date</p>
+                    </div>
+                </div>
+                <!--------------------------------------------------------------------->
+                <!-- Date Arrival -->
+                <div class="flightGroup">
+                    <span class="material-symbols-outlined">
+                        calendar_month
+                    </span>
+                    <div class="flightFormInput">
+                        <div class="inputGroup">
+                            <input type="date" name="arrivalDate" />
+                            <label>Arrival Date</label>
+                        </div>
+                        <p>Add Date</p>
+                    </div>
+                </div>
+                <!--------------------------------------------------------------------->
+                <!-- FlightID  -->
+                <div class="flightGroup">
+                    <span class="material-symbols-outlined">
+                        flight
+                    </span>
+                    <div class="flightFormInput">
+                        <div class="inputGroup">
+                            <input type="text" name="flightID" />
+                            <label>FlightID</label>
+                        </div>
+                        <p>Add FlightID Number</p>
+                    </div>
+                </div>
+                <button class="searchBtn" type="submit">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </button>
+            </form>
+        </section>
+    </section>
+    <!------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Section 2 : Destinations -->
+    <section class="popular_destinations">
+        <div class="popularNav">
+            <h2>Popular Destinations</h2>
+            <p>Explore the most travelled destinations for your next vacation</p>
+            <button class="viewAll">
+                <a href="/allPopularDestination">View All</a>
+            </button>
+        </div>
+        <div class="popularCardsContainer">
+            <% for (let i=0; i < popular.length; i++) { %>
+                <div class="popularCard">
+                    <img src="images/<%= popular[i].countryImage %>" alt="<%= popular[i].countryName %> Photo">
+                    <h3><%= popular[i].countryName %></h3>
+                </div>
+            <% } %>
+        </div>
+    </section>
+
+    </section>
+    <!-- Section 3 : Footer -->
+
+
+</body>
+
+</html>

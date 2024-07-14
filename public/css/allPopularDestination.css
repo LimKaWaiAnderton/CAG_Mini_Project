@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Header Css */
+.header {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Navbar Css */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: translateY(-5px);
+}
+
+.links li {
+    list-style: none;
+    display: inline-block;
+    margin: 8px 30px;
+}
+
+.links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.userSystem {
+    font-size: 18px;
+}
+
+.userSystem a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.allPopularDestinaton {
+    text-align: center;
+    margin: 20px 0;
+    
+}
+
+.allPopularDestinaton h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.allPopularDestinaton p {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.allPopularDestinaton a{
+    text-decoration: none;
+    color: #007bff;
+
+}
+
+.allPopularContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.popularCard {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(25% - 20px); /* 4 cards in a row with 20px gap */
+    margin: 10px 0;
+}
+
+.popularImage img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.popularDetails {
+    padding: 20px;
+    text-align: center;
+}
+
+.popularName {
+    margin: 10px 0;
+}
+
+.popularName span {
+    display: block;
+    font-size: 14px;
+    color: #888;
+}
+
+.popularName strong {
+    font-size: 18px;
+    color: #333;
+}
+
+.admin a {
+    margin: 0 5px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.admin a:hover {
+    text-decoration: underline;
+}

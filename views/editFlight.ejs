@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirPlus</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/editFlight.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Custom JS -->
+    <script src="/javascript/javascript.js"></script>
+</head>
+
+<body class="editFlightbackground">
+    <!-- Include Navigation Bar -->
+    <section class="navbar">
+        <%- include('partials/loggedInNav') %>
+    </section>
+    <section class="container">
+        <div class="card">
+            <h2>Update Flight Status</h2>
+            <br>
+            <% if (flight) { %>
+            <form action="/editFlight/<%= flight.flightID %>" method="POST" enctype="multipart/form-data">
+                <div class="form-group text-center">
+                    <label for="image">Current Image:</label><br>
+                    <input type="hidden" name="currentImage" value="<%= flight.airlineLogo %>">
+                    <img src="/images/<%= flight.airlineLogo %>" class="img-fluid mb-3" style="max-width: 200px;"><br><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="airline">Airline:</label>
+                    <input type="text" id="airline" name="airline" value="<%= flight.airline %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="departure">Departure Date:</label>
+                    <input type="date" id="departure" name="departure" value="<%= flight.departure %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="arrival">Arrival Date:</label>
+                    <input type="date" id="arrival" name="arrival" value="<%= flight.arrival %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">New Image:</label>
+                    <input type="file" id="image" name="image" accept="image/*">
+                </div>
+
+                <button type="submit" class="btn-primary">Update Flight</button>
+            </form>
+            <% } else { %>
+            <p>No flight found.</p>
+            <% } %>
+            <a href="/allFlightStatus" class="btn-secondary">Back</a>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Header Css */
+.header {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Navbar Css */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.links li {
+    list-style: none;
+    display: inline-block;
+    margin: 8px 30px;
+}
+
+.links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.userSystem {
+    font-size: 18px;
+}
+
+.userSystem a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.flightCard {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    margin: 20px auto;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 900px;
+}
+
+.flightImage img {
+    width: 150px;
+    height: auto;
+}
+
+.flightInfoContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.flightStatusEJS {
+    min-height: 92vh;
+    background-image: linear-gradient(rgb(100, 88, 255), rgb(146, 139, 255), rgb(190, 186, 250));
+    background-size: cover;
+    background-position: center;
+}
+
+.flightStatus h1 {
+    font-size: 1.5rem;
+    margin: 10px 20px;
+}
+
+.flightStatusByIDNavigation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.flightStatusByIDNavigation span {
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin: 10px 20px;
+}
+
+.tipsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+    
+}
+
+.tips {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border: 1px solid #000;
+    border-radius: 8px;
+
+}
+
+.tips h2 {
+    margin-bottom: 10px;
+}
+
+.tips ul {
+    padding-left: 20px;
+}
+
+.tips ul li {
+    margin: 5px 0;
+    list-style: disc    ;
+}

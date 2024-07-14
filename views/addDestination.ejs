@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirPlus</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/addDestination.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Javascript -->
+    <script src="/javascript/javascript.js"></script>
+</head>
+<body>
+    <section class="header">
+        <section class="navbar">
+            <%- include('partials/loggedNav') %>
+        </section>
+        <div class="container">
+            <br>
+            <div class="text-center"><h2>Add New Destination</h2></div>
+            <br>
+            <div class="text-center">
+                <form action="/addDestination" method="POST" enctype="multipart/form-data">
+                    <label for="countryName">Country Name:</label><br>
+                    <input type="text" id="countryName" name="countryName" required><br><br>
+    
+                    <label for="countryImage">Country Image:</label><br>
+                    <input type="file" id="countryImage" name="countryImage" accept="image/*" required><br><br>
+                    
+                    <button type="submit">Add Destination</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

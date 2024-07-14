@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Header Css */
+.editFlightbackground {
+    width: 100%;
+    min-height: 90vh;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Navbar Css */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: translateY(-5px);
+}
+
+.links li {
+    list-style: none;
+    display: inline-block;
+    margin: 8px 30px;
+}
+
+.links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.userSystem {
+    font-size: 18px;
+}
+
+.userSystem a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.editFlightbackground {
+    background: url('/images/whiteclouds.jpg');
+    height: 65vh;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+h2 {
+    color: #000000;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group .form-control-file {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.form-control-file {
+    padding: 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-secondary {
+    color: rgb(0, 0, 0);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    opacity: 0.8;
+}
+
+.img-fluid {
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+}
