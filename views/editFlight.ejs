@@ -17,7 +17,7 @@
 <body class="editFlightbackground">
     <!-- Include Navigation Bar -->
     <section class="navbar">
-        <%- include('partials/loggedInNav') %>
+        <%- include(user ? 'partials/loggedNav' : 'partials/navbar') %>
     </section>
     <section class="container">
         <div class="card">

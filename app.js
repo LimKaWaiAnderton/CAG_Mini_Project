@@ -34,6 +34,8 @@ connection.connect((err) => {
     console.log('Connected to MySQL database');
 });
 
+
+// ChatGPT codes start here
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

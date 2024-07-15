@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <section>
-        <%- include ('partials/navbar') %>
+    <section class="navbar">
+        <%- include(user ? 'partials/loggedNav' : 'partials/navbar') %>
     </section>
     <section class="flightStatusEJS">
         <section class="flightStatus">
