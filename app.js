@@ -6,7 +6,7 @@ const session = require('express-session');
 require('dotenv').config(); // Load environment variables
 
 const app = express();
-const port = 3001;
+const port = 3306;
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
