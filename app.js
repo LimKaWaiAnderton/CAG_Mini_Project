@@ -215,7 +215,7 @@ app.get('/addFlight', (req, res) => {
     res.render('addFlight');
 });
 
-ap.post('/addFlight', upload.single('airlineLogo'), (req, res) => {
+app.post('/addFlight', upload.single('airlineLogo'), (req, res) => {
     const { countryName, departureDate, arrivalDate, planeNo, airline } = req.body;
     let airlineLogo;
     if (req.file) {
