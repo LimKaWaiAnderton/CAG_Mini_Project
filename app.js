@@ -6,7 +6,7 @@ const session = require('express-session');
 require('dotenv').config(); // Load environment variables
 
 const app = express();
-const port = 3306;
+const port = process.env.PORT || 3000;
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -258,6 +258,11 @@ app.get('/about', (req, res) => {
 // Contact Page //
 app.get('/contact', (req, res) => {
     res.render('contact');
+});
+
+app.use((err, req, res, next) => {
+    console.error('Unhandled Error:', err);
+    res.status(500).send('Internal Server Error');
 });
 
 app.listen(port, () => {
