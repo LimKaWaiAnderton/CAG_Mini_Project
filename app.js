@@ -21,9 +21,9 @@ const upload = multer({ storage: storage });
 
 const connection = mysql.createConnection({
     host: 'sql.freedb.tech',
-    user: 'freedb_admin1',
-    password: 'PH9?D9FfSxVb$Kh',
-    database: 'freedb_Airplus'
+    user: 'teamfive',
+    password: 'mG$&mXwD#?tt$Y9',
+    database: 'teamfivedb'
 });
 
 connection.connect((err) => {
@@ -215,7 +215,7 @@ app.get('/addFlight', (req, res) => {
     res.render('addFlight');
 });
 
-app.post('/addFlight', upload.single('airlineLogo'), (req, res) => {
+ap.post('/addFlight', upload.single('airlineLogo'), (req, res) => {
     const { countryName, departureDate, arrivalDate, planeNo, airline } = req.body;
     let airlineLogo;
     if (req.file) {
@@ -256,7 +256,7 @@ app.get('/about', (req, res) => {
 
 ////////////////////////////////////////////////////////////////////////////////////////
 // Contact Page //
-app.get('/contact', (req, res) => {
+app.get('/ontact', (req, res) => {
     res.render('contact');
 });
 
